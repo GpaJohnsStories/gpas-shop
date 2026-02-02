@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GPAS Shop — New 1-Box Shop Index -- 02/01 -- 6:27 PM</title>
+  <title>GPAS Shop — New 1-Box Shop Index -- 02/01 -- 7:50 PM</title>
 </head>
 
 <body
@@ -15,8 +15,52 @@
   "
 >
 
-<div style="padding:0 10px;">
+  <!-- Top breathing room above the wall -->
+    <div style="height:12px;"></div>
   
+<!--
+  OUTER WRAPPER
+  -------------
+  This div spans the full browser width.
+  Its only job is to allow horizontal scrolling
+  if the screen is narrower than the fixed table.
+-->
+<div
+  style="
+    width:100%;
+    overflow-x:auto;
+  "
+>
+
+  <!--
+    CENTERING FRAME
+    ----------------
+    This div defines the exact desktop width of the wall.
+    It centers the table on wide screens and prevents
+    the browser from squeezing columns on narrow screens.
+  -->
+  <div
+    style="
+      width:1250px;
+      margin:0 auto;
+    "
+  >
+
+    <!--
+      THE TABLE ITSELF
+      ----------------
+      The table remains rigid and architectural.
+      Column widths and row heights are fixed inside.
+      No responsiveness happens here.
+    -->
+    <table
+      style="
+        width:1250px;
+        table-layout:fixed;
+        border-collapse:collapse;
+      "
+    >
+
 <table
   cellspacing="0"
   cellpadding="0"
@@ -314,22 +358,30 @@
   </td>
 </tr>
 </table>
+
+  </div>
 </div>
   
-<!-- ===================================================== -->
-<!-- Shared GPAS Footer (iframe) -->
-<iframe
-  src="https://gpajohnsstories.github.io/gpas-common/pages/gpas-footer.html"
-  style="
-    width:100%;
-    height:100px;
-    border:0;
-    display:block;
-    overflow:hidden;
-  "
-  loading="lazy"
-  title="Gpa’s Pages Footer"
-></iframe>
+<!-- Spacer between table and footer board -->
+<div style="height:12px;"></div>
+
+<!-- Footer wrapper: matches table centering and width -->
+<div style="width:100%; overflow-x:auto;">
+  <div style="width:1250px; margin:0 auto;">
+    <iframe
+      src="https://gpajohnsstories.github.io/gpas-common/pages/gpas-footer.html"
+      style="
+        width:1250px;
+        height:100px;
+        border:0;
+        display:block;
+        overflow:hidden;
+      "
+      loading="lazy"
+      title="Gpa’s Pages Footer"
+    ></iframe>
+  </div>
+</div>
 
 </body>
 </html>
