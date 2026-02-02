@@ -53,26 +53,20 @@
       Column widths and row heights are fixed inside.
       No responsiveness happens here.
     -->
-    <table
-      style="
-        width:1240px;
-        table-layout:fixed;
-        border-collapse:collapse;
-        border:0;
-      "
-    >
-
-<table
+ <table
   cellspacing="0"
   cellpadding="0"
   style="
-    border-collapse:collapse;
+    width:1240px;
     table-layout:fixed;
+    border-collapse:collapse;
+    border:0;
     margin-left:auto;
     margin-right:auto;
     margin-top:10px;
   "
 >
+
 <!-- Row 0 -- Dummy Row to set widths so real row 1 can use colspan -->
 <tr style="height:0;">
   <td style="width:150px;padding:0;border:0;"></td>
@@ -94,31 +88,24 @@
   <!-- ROW 1 : Welcome row — defines ALL column widths -->
  <tr>
   <!-- GROUP 1 : Columns 1–3 — Blackboard (Special Product) -->
-  <td colspan="3"
-      style="
-        height:300px;
+  <td
+  colspan="3"
+  id="table1-col1-featured"
+  title="Featured Product"
+  style="
+    height:300px;
 
-        /* full framed blackboard fits exactly */
-        background-image:url('photos/shop-blackboard.png');
-        background-size:300px 300px;
-        background-position:center;
-        background-repeat:no-repeat;
+    /* full framed blackboard fits exactly */
+    background-image:url('photos/shop-blackboard.png');
+    background-size:300px 300px;
+    background-position:center;
+    background-repeat:no-repeat;
 
-        box-sizing:border-box;
-        padding:25px;
-
-        font-family:Kalam,'Comic Sans MS',cursive;
-        font-size:21px;
-        font-weight:400;
-        line-height:1.25;
-        color:#ffffff;
-
-        border:0 solid #666;
-      ">
-    <center>Special Product</center>
-    <div style="height:12px;"></div>
-    <div style="font-size:21px;font-weight:600;"></div>
-  </td>
+    box-sizing:border-box;
+    padding:12px;
+    vertical-align:top;
+  "
+>
 
   <!-- COLUMN 4 : Vertical spacer -->
   <td></td>
@@ -373,7 +360,7 @@
       src="https://gpajohnsstories.github.io/gpas-common/pages/gpas-footer.html"
       style="
         width:1240px;
-        height:120px;
+        height:90px;
         border:0;
         display:block;
         overflow:hidden;
