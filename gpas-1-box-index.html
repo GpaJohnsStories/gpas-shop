@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GPAS Shop — New 1-Box Shop Index -- 02/07 -- 4:51 PM</title>
+  <title>GPAS Shop — New 1-Box Shop Index -- 02/07 -- 5-32-PM</title>
 </head>
 
 <body
@@ -87,15 +87,15 @@
   
   <!-- ROW 1 : Welcome row — defines ALL column widths -->
 <tr>
-   <!-- GROUP 1 : Columns 1–3 — cork board (Special Product) -->
- <td
+<!-- GROUP 1 : Columns 1–3 — cork board (Special Product) -->
+<td
   colspan="3"
   id="table1-col1-featured"
   title="Featured Product"
   style="
     height:300px;
     padding-top:7px;
-    /* full framed cork board fits exactly */
+    position:relative; /* establishes stacking context */
     background-image:url('photos/gpas-shop-cork-board.png');
     background-size:300px 300px;
     background-position:center;
@@ -111,10 +111,38 @@
   <!-- Current featured product: HTK-001                         -->
   <!-- Source: gpas-shop / prod / HTK-001.html                   -->
   <!-- ========================================================= -->
-  <div align="center">
-    <img src="p-photos/FBF-004-290.jpg" alt="FBF-004-290">
+
+  <div align="center" style="position:relative; display:inline-block;">
+    
+    <!-- PUSH PIN — sits ABOVE the photo -->
+    <img
+      src="icons/shop-pushpin-orange-small.png"
+      alt=""
+      style="
+        position:absolute;
+        top:8px;                 /* 8px below top of photo */
+        left:50%;
+        transform:translateX(-50%);
+        z-index:2;               /* ABOVE photo */
+        pointer-events:none;
+      "
+    >
+
+    <!-- FEATURED PHOTO (card) -->
+    <img
+      src="p-photos/FBF-004-290.jpg"
+      alt="FBF-004-290"
+      style="
+        position:relative;
+        z-index:1;               /* BELOW pin */
+      "
+    >
   </div>
- </td>
+</td>
+
+<!-- COLUMN 4 : Vertical spacer -->
+<td></td>
+
 
   <!-- COLUMN 4 : Vertical spacer -->
   <td></td>
