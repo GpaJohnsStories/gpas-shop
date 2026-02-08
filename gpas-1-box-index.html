@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GPAS Shop — New 1-Box Shop Index -- 02/07 -- 7-22-PM</title>
+  <title>GPAS Shop — New 1-Box Shop Index -- 02/07 -- 7-44-PM</title>
 </head>
 
 <body
@@ -208,6 +208,8 @@
       width:300px;
       height:100%;
       box-sizing:border-box;
+      position:relative;    /* <-- ensure this wrapper is the positioning context */
+      overflow:hidden;      /* optional: keep content contained */
     "
   >
     <img
@@ -221,16 +223,16 @@
       "
     >
 
-        <!-- PUSH PIN — sits at top of the photo -->
+<!-- PUSH PIN — now positioned relative to the wrapper above -->
     <img
       src="icons/shop-pushpin-orange-25h.png"
       alt=""
       style="
         position:absolute;
-        top:4px;                 /* 8px below top of photo */
+        top:4px;                 /* Distance from top of wrapper */
         left:50%;
         transform:translateX(-50%);
-        z-index:2;               /* ABOVE photo */
+        z-index:3;               /* ABOVE photo */
         pointer-events:none;
       "
     >
